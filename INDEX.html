@@ -2,63 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Replicode</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replicode - Build. Learn. Replicate</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav class="navbar">
+<header>
+    <div class="header-container">
         <div class="logo">Replicode</div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Contact</a></li>
-            <li>
-                <button id="themeToggle" class="theme-btn">🌙</button>
-            </li>
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <button id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </div>
+</header>
 
-    <!-- Hero Section -->
+<div class="top-section">
     <section class="hero">
         <h1>Build. Learn. Replicate.</h1>
-        <p>Practice coding by building real projects.</p>
-
+        <p>Practice coding by building real projects</p>
         <div class="buttons">
-            <a href="https://github.com/" target="_blank">
-                <button class="btn github">GitHub</button>
+            <a href="https://github.com/Mounika-Kalavakollu24/Replicode" class="btn btn-github">
+                <i class="fab fa-github"></i> View on Github
             </a>
-            <button class="btn learn">Learn More</button>
+            <a href="#" class="btn btn-learn">Learn More</a>
         </div>
     </section>
+</div>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="card">
-            <div class="icon">💡</div>
-            <h3>Learn by doing</h3>
-            <p>Improve your coding skills</p>
-        </div>
+<div class="features">
+    <div class="feature-box">
+        <span class="icon">💡</span>
+        <h3>Learn by Doing</h3>
+        <p>Improve your coding skills.</p>
+    </div>
 
-        <div class="card">
-            <div class="icon">🖥️</div>
-            <h3>Project examples</h3>
-            <p>Study real-world projects</p>
-        </div>
+    <div class="feature-box">
+        <span class="icon">💻</span>
+        <h3>Project Examples</h3>
+        <p>Study real world projects.</p>
+    </div>
 
-        <div class="card">
-            <div class="icon">⚙️</div>
-            <h3>Easy to follow</h3>
-            <p>Simple steps to replicate</p>
-        </div>
-    </section>
+    <div class="feature-box">
+        <span class="icon">⚙️</span>
+        <h3>Easy to Follow</h3>
+        <p>Simple steps to replicate.</p>
+    </div>
+</div>
 
-    <!-- Footer -->
-    <footer>
-        © 2026 Replicode
-    </footer>
+<footer>
+    &copy; 2026 Replicode
+</footer>
 
-    <script src="script.js"></script>
+<!-- External JS -->
+<script src="script.js"></script>
 </body>
 </html>
