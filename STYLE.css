@@ -78,13 +78,24 @@ nav a:hover {
     color: var(--accent);
 }
 
+/* Make button a flex container so icon can move */
 #theme-toggle {
-    background: rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: flex-start; /* Start: icon on left */
+    align-items: center;
+    background: none;
     border: none;
-    padding: 4px 10px;
-    border-radius: 15px;
     cursor: pointer;
+    font-size: 24px;
+    padding: 5px 10px;
+    transition: justify-content 0.3s; /* Smooth movement */
 }
+
+/* When active, icon moves to the right */
+#theme-toggle.right {
+    justify-content: flex-end; 
+}
+
 
 /* Hero */
 .top-section {
@@ -142,13 +153,15 @@ nav a:hover {
 }
 
 .feature-box {
-    background-color: var(--box-bg);
-    width: 250px;
-    padding: 30px 20px;
-    border-radius: 15px;
+    background-color: #ffffff;  /* White background */
+    color: #333;               /* Dark text for contrast */
+    padding: 20px;
+    border-radius: 10px;       /* Rounded corners */
     text-align: center;
-    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);  /* Soft shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
 }
+
 
 .feature-box:hover {
     transform: translateY(-8px);
