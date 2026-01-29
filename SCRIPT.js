@@ -1,27 +1,36 @@
 const btn = document.getElementById("theme-toggle");
 
-// Initial theme (system preference)
+if (!btn) {
+    console.error("Theme toggle button not found");
+}
+
+// Set initial theme (system preference)
 if (!document.documentElement.getAttribute("data-theme")) {
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    document.documentElement.setAttribute("data-theme", prefersDark ? "dark" : "light");
-}
-
-// Set correct icon
-function updateIcon() {
-    const theme = document.documentElement.getAttribute("data-theme");
-    btn.innerHTML = theme === "dark"
-        ? '<i class="fas fa-sun"></i>'
-        : '<i class="fas fa-moon"></i>';
-}
-
-updateIcon();
-
-// Toggle theme
-btn.addEventListener("click", () => {
-    const theme = document.documentElement.getAttribute("data-theme");
     document.documentElement.setAttribute(
         "data-theme",
-        theme === "dark" ? "light" : "dark"
+        prefersDark ? "dark" : "light"
+    );
+}
+
+// Update icon based on current theme
+function updateIcon() {
+    const theme = document.documentElement.getAttribute("data-theme");
+    btn.innerHTML =
+        theme === "dark"
+            ? '<i class="fas fa-sun"></i>'
+            : '<i class="fas fa-moon"></i>';
+}
+
+// Initial icon setup
+updateIcon();
+
+// Toggle theme on click
+btn.addEventListener("click", () => {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    document.documentElement.setAttribute(
+        "data-theme",
+        currentTheme === "dark" ? "light" : "dark"
     );
     updateIcon();
 });
